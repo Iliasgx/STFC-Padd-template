@@ -13,4 +13,12 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "STFC Padd"
-include ':app'
+include(
+    ":app",
+    ":core",
+    ":statistics",
+    ":tracker",
+    ":tracker:buildings",
+    ":tracker:research",
+    ":remotesync"
+)
