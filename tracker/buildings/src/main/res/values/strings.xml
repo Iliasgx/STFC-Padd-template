@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_buildings">Buildings</string>
+
+    <!-- Building Groups -->
+    <string name="building_group_research">Research Buildings</string>
+    <string name="building_group_ship">Ship Buildings</string>
+    <string name="building_group_officer">Officer Buildings</string>
+    <string name="building_group_drydock">Drydocks</string>
+    <string name="building_group_defense_platform">Defense Platforms</string>
+    <string name="building_group_parsteel">Parsteel Buildings</string>
+    <string name="building_group_tritanium">Tritanium Buildings</string>
+    <string name="building_group_dilithium">Dilithium Buildings</string>
+
+    <!-- Buildings Screen -->
+    <string name="buildings_back_main">Back to main list</string>
+    <string name="item_building_group_arrow">Filter on group</string>
+    <string name="item_building_group_progress">Progress %d%%</string>
+    <string name="item_building_single_level">Level %d</string>
+</resources>

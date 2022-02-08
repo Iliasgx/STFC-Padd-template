@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ListCardView" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
+    </style>
+
+    <style name="ProgressBar" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="trackCornerRadius">28dp</item>
+    </style>
+</resources>
