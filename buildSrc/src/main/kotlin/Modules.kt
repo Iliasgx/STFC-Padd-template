@@ -7,5 +7,4 @@ object Modules {
     const val trackerResearch = ":tracker:research"
 
     const val statistics = ":statistics"
-    const val remotesync = ":remotesync"
 }

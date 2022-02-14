@@ -19,6 +19,5 @@ include(
     ":statistics",
     ":tracker",
     ":tracker:buildings",
-    ":tracker:research",
-    ":remotesync"
+    ":tracker:research"
 )

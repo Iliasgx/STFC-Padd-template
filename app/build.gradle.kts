@@ -66,7 +66,6 @@ dependencies {
     implementation(project(Modules.trackerBuildings))
     implementation(project(Modules.trackerResearch))
     implementation(project(Modules.statistics))
-    implementation(project(Modules.remotesync))
 
     // Coroutines
     implementation(Coroutines.coroutines)
