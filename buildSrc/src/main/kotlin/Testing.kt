@@ -14,6 +14,10 @@ object Testing {
     private const val testRunnerVersion = "1.4.0"
     const val testRunner = "androidx.test:runner:$testRunnerVersion"
 
+    // Test Rules
+    private const val testRulesVersion = "1.4.0"
+    const val testRules = "androidx.test:rules:$testRulesVersion"
+
     // Coroutines
     private const val coroutinesVersion = "1.6.0"
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
@@ -35,4 +39,8 @@ object Testing {
 
     private const val mockWebServerVersion = "4.9.3"
     const val mockWebServer = "com.squareup.okhttp3:mockwebserver:$mockWebServerVersion"
+
+    // Espresso
+    private const val espressoCoreVersion = "3.4.0"
+    const val espressoCore = "androidx.test.espresso:espresso-core:$espressoCoreVersion"
 }

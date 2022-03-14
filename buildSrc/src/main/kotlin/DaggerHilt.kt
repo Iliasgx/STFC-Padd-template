@@ -11,4 +11,7 @@ object DaggerHilt {
 
     private const val androidCompilerVersion = "1.0.0"
     const val compilerAndroid = "androidx.hilt:hilt-compiler:$androidCompilerVersion"
+
+    private const val workManagerVersion = "1.0.0"
+    const val workManagerHilt = "androidx.hilt:hilt-work:$workManagerVersion"
 }
