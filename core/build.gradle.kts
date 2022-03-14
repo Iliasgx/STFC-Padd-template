@@ -56,8 +56,12 @@ dependencies {
 
     // Moshi
     implementation(Moshi.moshi)
+    kapt(Moshi.moshiCodeGen)
 
     // Dagger Hilt
     implementation(DaggerHilt.hiltAndroid)
     kapt(DaggerHilt.compiler)
+
+    // Timber Logging
+    implementation(Timber.timber)
 }

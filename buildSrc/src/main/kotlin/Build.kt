@@ -1,3 +1,3 @@
 object Build {
-    const val gradlePluginVersion = "7.1.0"
+    const val gradlePluginVersion = "7.1.2"
 }
