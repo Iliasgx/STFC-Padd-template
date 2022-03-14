@@ -77,24 +77,30 @@ dependencies {
 
     // Moshi
     implementation(Moshi.moshi)
+    kapt(Moshi.moshiCodeGen)
+
+    // Retrofit
+    implementation(Retrofit.retrofit)
+    implementation(Retrofit.okHttp)
+    implementation(Retrofit.okHttpLoggingInterceptor)
+
+    // Timber Logging
+    implementation(Timber.timber)
 
     // Testing
     testImplementation(Testing.jUnit)
     testImplementation(Testing.truth)
     testImplementation(Testing.coroutines)
-    testImplementation(Testing.roomAndroid)
-    testImplementation(Testing.mockk)
-    testImplementation(Testing.hiltAndroid)
-    kaptTest(Testing.hiltAndroidCompiler)
 
     androidTestImplementation(Testing.jUnitAndroid)
     androidTestImplementation(Testing.truth)
     androidTestImplementation(Testing.testRunner)
+    androidTestImplementation(Testing.testRules)
     androidTestImplementation(Testing.coroutines)
     androidTestImplementation(Testing.roomAndroid)
     androidTestImplementation(Testing.mockk)
     androidTestImplementation(Testing.mockkAndroid)
-    androidTestImplementation(Testing.mockWebServer)
     androidTestImplementation(Testing.hiltAndroid)
+    androidTestImplementation(Testing.espressoCore)
     kaptAndroidTest(Testing.hiltAndroidCompiler)
 }
