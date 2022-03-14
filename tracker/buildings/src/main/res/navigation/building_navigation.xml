@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_buildings"
+    app:startDestination="@id/overviewFragment">
+
+    <fragment
+        android:id="@+id/overviewFragment"
+        android:name="com.iliasg.startrekfleetcommand.buildings.presentation.overview.OverviewFragment"
+        android:label="@string/title_overview"
+        tools:layout="@layout/frag_overview">
+        <action
+            android:id="@+id/action_overview_to_levels"
+            app:destination="@id/levelsDialogFragment" />
+        <action
+            android:id="@+id/action_overview_to_detailed"
+            app:destination="@id/detailedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedFragment"
+        android:name="com.iliasg.startrekfleetcommand.buildings.presentation.detailed.DetailedFragment"
+        android:label="@string/title_building_details"
+        tools:layout="@layout/frag_detailed">
+    </fragment>
+    <fragment
+        android:id="@+id/levelsDialogFragment"
+        android:name="com.iliasg.startrekfleetcommand.buildings.presentation.levels.LevelsFragment"
+        android:label="Levels"
+        tools:layout="@layout/frag_levels">
+        <action
+            android:id="@+id/action_levels_to_detailed"
+            app:destination="@id/detailedFragment" />
+    </fragment>
+</navigation>

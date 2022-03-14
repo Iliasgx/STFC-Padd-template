@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_buildings">Buildings</string>
+    <string name="title_overview">Buildings</string>
+    <string name="title_building_details">Building Details</string>
 
     <!-- Building Groups -->
     <string name="building_group_research">Research Buildings</string>
