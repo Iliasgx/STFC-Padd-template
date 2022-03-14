@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="data"
+            type="com.iliasg.startrekfleetcommand.buildings.domain.models.Building" />
+        <variable
+            name="upgradeable"
+            type="Boolean" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:nestedScrollingEnabled="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="?colorPrimarySurface"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                    android:textStyle="bold"
+                    android:text="@{data.name}"
+                    tools:text="Defense Platform D"/>
+
+                <TextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                    app:level_text="@{data.levelDetails.level}"
+                    tools:text="Level 53"/>
+            </LinearLayout>
+
+            <com.iliasg.startrekfleetcommand.core.presentation.components.ValueList
+                android:id="@+id/vl_bonuses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ll_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                app:title="@string/detailed_header_bonuses"/>
+
+            <TextView
+                android:id="@+id/tv_build_time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/vl_bonuses"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_power_title"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:textStyle="bold"
+                android:text="@string/detailed_header_build_time"/>
+
+            <TextView
+                android:id="@+id/tv_build_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_build_time_title"
+                app:layout_constraintStart_toStartOf="@id/tv_build_time_title"
+                app:layout_constraintEnd_toEndOf="@id/tv_build_time_title"
+                app:duration="@{data.levelDetails.buildTime}"
+                tools:text="3d 14h"/>
+
+            <TextView
+                android:id="@+id/tv_power_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/vl_bonuses"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_build_time_title"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:textStyle="bold"
+                android:text="@string/detailed_header_power"/>
+
+            <TextView
+                android:id="@+id/tv_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_power_title"
+                app:layout_constraintStart_toStartOf="@id/tv_power_title"
+                app:layout_constraintEnd_toEndOf="@id/tv_power_title"
+                app:power_increase="@{data.levelDetails.increasedPower}"
+                tools:text="+ 7.000"/>
+
+            <com.iliasg.startrekfleetcommand.core.presentation.components.ValueList
+                android:id="@+id/vl_build_costs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_build_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                app:title="@string/detailed_header_build_costs"/>
+
+            <com.iliasg.startrekfleetcommand.core.presentation.components.ValueList
+                android:id="@+id/vl_requirements"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/vl_build_costs"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                app:title="@string/detailed_header_requirements"/>
+
+            <com.iliasg.startrekfleetcommand.core.presentation.components.ValueList
+                android:id="@+id/vl_rewards"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/vl_requirements"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                app:title="@string/detailed_header_rewards"/>
+
+            <TextView
+                android:id="@+id/tv_description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/vl_rewards"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:textStyle="bold"
+                android:text="@string/detailed_header_description"/>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_description_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center_horizontal"
+                android:text="@{data.description}"
+                tools:text="This building is..."/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.Material3.Button.IconButton"
+                app:layout_constraintTop_toTopOf="@id/btn_upgrade"
+                app:layout_constraintBottom_toBottomOf="@id/btn_upgrade"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_upgrade"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:backgroundTint="?colorPrimary"
+                app:iconTint="?colorOnPrimary"
+                app:icon="@drawable/ic_arrow_left"
+                app:cornerRadius="@dimen/corner_large"
+                android:visibility="@{data.levelDetails.level != 1 ? View.VISIBLE : View.INVISIBLE}"
+                android:contentDescription="@string/previous"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_upgrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                app:layout_constraintStart_toEndOf="@id/btn_previous"
+                app:layout_constraintEnd_toStartOf="@id/btn_next"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:layout_margin="15dp"
+                app:cornerRadius="@dimen/corner_large"
+                android:visibility="@{upgradeable ? View.VISIBLE : View.INVISIBLE}"
+                android:text="@string/upgrade"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/btn_upgrade"
+                app:layout_constraintBottom_toBottomOf="@id/btn_upgrade"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_upgrade"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:backgroundTint="?colorPrimary"
+                app:iconTint="?colorOnPrimary"
+                style="@style/Widget.Material3.Button.IconButton"
+                app:icon="@drawable/ic_arrow_right"
+                app:cornerRadius="@dimen/corner_large"
+                android:visibility="@{data.levelDetails.level != data.levelCount ? View.VISIBLE : View.INVISIBLE}"
+                android:contentDescription="@string/next"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

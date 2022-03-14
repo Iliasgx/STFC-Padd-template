@@ -17,5 +17,21 @@
     <string name="buildings_back_main">Back to main list</string>
     <string name="item_building_group_arrow">Filter on group</string>
     <string name="item_building_group_progress">Progress %d%%</string>
-    <string name="item_building_single_level">Level %d</string>
+
+    <!-- Building Detailed Screen -->
+    <string name="detailed_header_bonuses">Bonuses</string>
+    <string name="detailed_header_build_time">Build Time</string>
+    <string name="detailed_header_power">Power</string>
+    <string name="detailed_header_build_costs">Build Costs</string>
+    <string name="detailed_header_requirements">Requirements</string>
+    <string name="detailed_header_rewards">Rewards</string>
+    <string name="detailed_header_description">Description</string>
+
+    <string name="dialog_confirmation_title">Downgrading %s</string>
+    <string name="dialog_confirmation_message">Please confirm that you want to downgrade the building.</string>
+    <string name="dialog_confirmation_message_operations">
+        Please confirm that you want to downgrade the Operations building.
+
+        This will downgrade all buildings and research that depend on the current Operations level.
+    </string>
 </resources>
