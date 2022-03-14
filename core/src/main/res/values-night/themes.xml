@@ -6,7 +6,7 @@
         <item name="colorOnBackground">@color/gray_700</item>
 
         <item name="colorPrimary">@color/purple_600</item>
-        <item name="colorOnPrimary">@color/white_200</item>
+        <item name="colorOnPrimary">@color/gray_300</item>
 
         <item name="colorSecondary">@color/yellow_300</item>
 

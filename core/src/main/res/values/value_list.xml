@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ValueList">
+        <attr name="title" format="string"/>
+        <attr name="merge" format="boolean"/>
+    </declare-styleable>
+
+    <string name="value_list_empty">None</string>
+</resources>

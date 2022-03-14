@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="level">Level %d</string>
     <string name="upgrade">Upgrade</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+
+    <string name="short_year">%dy</string>
+    <string name="short_day">%dd</string>
+    <string name="short_hour">%dh</string>
+    <string name="short_minute">%dm</string>
+    <string name="short_second">%ds</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
 </resources>

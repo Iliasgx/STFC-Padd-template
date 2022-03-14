@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.Gravity"/>
+
+        <variable name="type" type="String" />
+        <variable name="value" type="String" />
+        <variable name="merge" type="Boolean"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_value"
+            app:layout_constraintEnd_toStartOf="@id/tv_value"
+            android:layout_marginEnd="10dp"
+            android:gravity="@{merge ? Gravity.END : Gravity.START}"
+            android:text="@{type}"
+            tools:text="3★ Uncommon Crystal"
+            tools:gravity="start"/>
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_type"
+            android:gravity="@{merge ? Gravity.START : Gravity.END}"
+            android:text="@{value}"
+            tools:text="300.000.000.000.000"
+            tools:gravity="end"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
