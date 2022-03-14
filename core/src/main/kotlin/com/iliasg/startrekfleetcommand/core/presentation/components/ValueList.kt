@@ -11,7 +11,9 @@ import androidx.core.content.withStyledAttributes
 import com.iliasg.startrekfleetcommand.core.R
 import com.iliasg.startrekfleetcommand.core.databinding.CustomValueListBinding
 import com.iliasg.startrekfleetcommand.core.databinding.ValueListItemBinding
-import com.iliasg.startrekfleetcommand.core.domain.models.*
+import com.iliasg.startrekfleetcommand.core.domain.models.BonusMerge
+import com.iliasg.startrekfleetcommand.core.domain.models.Requirement
+import com.iliasg.startrekfleetcommand.core.domain.models.ResourceType
 import java.text.NumberFormat
 
 class ValueList @JvmOverloads constructor(

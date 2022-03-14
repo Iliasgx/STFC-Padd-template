@@ -1,6 +1,5 @@
 package com.iliasg.startrekfleetcommand.core.presentation.utils
 
-import android.widget.ListView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.iliasg.startrekfleetcommand.core.R
