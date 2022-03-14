@@ -16,6 +16,7 @@ rootProject.name = "STFC Padd"
 include(
     ":app",
     ":core",
+    ":core-test",
     ":statistics",
     ":tracker",
     ":tracker:buildings",

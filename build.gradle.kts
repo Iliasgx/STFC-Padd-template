@@ -8,7 +8,7 @@ buildscript {
 plugins {
     id("com.android.application") version Build.gradlePluginVersion apply false
     id("com.android.library") version Build.gradlePluginVersion apply false
-    kotlin("android") version "1.6.10" apply false
+    kotlin("android") version Kotlin.version apply false
     kotlin("jvm") version Kotlin.version apply false
 }
 

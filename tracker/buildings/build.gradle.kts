@@ -45,6 +45,7 @@ android {
 
 dependencies {
     implementation(project(":core"))
+    testImplementation(project(":core-test"))
 
     // Coroutines
     implementation(Coroutines.coroutines)
