@@ -45,9 +45,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    kapt {
-        correctErrorTypes = true
-    }
     packagingOptions {
         resources.excludes.add("META-INF/AL2.0")
         resources.excludes.add("META-INF/LGPL2.1")
@@ -64,8 +61,9 @@ dependencies {
     // Modules
     implementation(project(Modules.core))
     implementation(project(Modules.trackerBuildings))
-    implementation(project(Modules.trackerResearch))
-    implementation(project(Modules.statistics))
+    // implementation(project(Modules.trackerResearch))
+    // implementation(project(Modules.statistics))
+    testImplementation(project(Modules.coreTest))
 
     // Coroutines
     implementation(Coroutines.coroutines)
@@ -102,6 +100,7 @@ dependencies {
     implementation(DaggerHilt.hiltAndroid)
     implementation(DaggerHilt.lifecycleViewModel)
     implementation(DaggerHilt.navFragmentAndroid)
+    implementation(DaggerHilt.workManagerHilt)
     kapt(DaggerHilt.compiler)
     kapt(DaggerHilt.compilerAndroid)
 
@@ -111,6 +110,10 @@ dependencies {
 
     // Moshi
     implementation(Moshi.moshi)
+    kapt(Moshi.moshiCodeGen)
+
+    // Timber Logging
+    implementation(Timber.timber)
 
     // Testing
     testImplementation(Testing.jUnit)
@@ -125,6 +128,7 @@ dependencies {
     androidTestImplementation(Testing.jUnitAndroid)
     androidTestImplementation(Testing.truth)
     androidTestImplementation(Testing.testRunner)
+    androidTestImplementation(Testing.testRules)
     androidTestImplementation(Testing.coroutines)
     androidTestImplementation(Testing.roomAndroid)
     androidTestImplementation(Testing.workManagerAndroid)
@@ -132,5 +136,6 @@ dependencies {
     androidTestImplementation(Testing.mockkAndroid)
     androidTestImplementation(Testing.mockWebServer)
     androidTestImplementation(Testing.hiltAndroid)
+    androidTestImplementation(Testing.espressoCore)
     kaptAndroidTest(Testing.hiltAndroidCompiler)
 }
